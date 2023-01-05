@@ -233,12 +233,9 @@ $movie = json_decode($responsoe);
                                                             <h3>Click To Watch Trailer</h3>
                                                         </a>
                                                     </div>
-                                                    <div class="zmovo-blog-d-p">
 
-                                                        <p>
-                                                            <?php echo ($movie->story) ?>
-                                                        </p>
-                                                    </div>
+                                                    <button class="mybuttonM">Download</button>
+
                                                     <div class="item">
                                                         <div class="zmovo-slider-contents">
 
@@ -254,7 +251,7 @@ $movie = json_decode($responsoe);
                                                                                     <div class="dec-review-meta">
                                                                                         <ul>
                                                                                             <li><span>Category <label>:</label></span>
-                                                                                                <?php echo ($movie->category[0]) ?>
+                                                                                                <?php echo ($movie->categorys) ?>
                                                                                             </li>
                                                                                             <li>
                                                                                                 <span>Actor <label>:</label></span>
@@ -266,7 +263,7 @@ $movie = json_decode($responsoe);
                                                                                             <li><span>releace <label>:</label></span>
                                                                                                 <?php echo ($movie->release) ?>
                                                                                             </li>
-                                                                                            <li><span>languase <label>:</label></span>
+                                                                                            <li><span>languasge <label>:</label></span>
                                                                                                 <?php echo ($movie->language) ?>
                                                                                             </li>
                                                                                             <li><span>Format <label>:</label></span>
@@ -275,9 +272,16 @@ $movie = json_decode($responsoe);
                                                                                             <li><span>Resulation <label>:</label></span>
                                                                                                 <?php echo ($movie->resulation) ?>
                                                                                             </li>
+                                                                                            <li>
+                                                                                                <span>Story <label>:</label></span>
+                                                                                            </li>
+                                                                                            <li>
+                                                                                                <?php echo ($movie->story) ?>
+                                                                                            </li>
 
                                                                                         </ul>
                                                                                     </div>
+                                                                                    <button class="mybuttonM">Download</button>
                                                                                     <div class="mt-2">
                                                                                         <h4>Download</h4>
                                                                                         <?php
@@ -340,15 +344,15 @@ $movie = json_decode($responsoe);
                                                                 <img width="60" src="' . $post->thumb . '" alt="' . $post->name . '">
                                                                 </div>
                                                                 <div class="zmovo-v-list-content">
-                                                                    <a href="">'.$post->name.'</a>
-                                                                    <div class="movie-time"><i class="fa fa-clock-o c1"></i><span>'.$post->duration.'</span></div>
+                                                                    <a href="">' . $post->name . '</a>
+                                                                    <div class="movie-time"><i class="fa fa-clock-o c1"></i><span>' . $post->duration . '</span></div>
                                                                 </div>
                                                             </div>
                                                                 ');
                                                             }
                                                             ?>
 
-                                                            
+
 
                                                         </div>
                                                     </div>
@@ -499,6 +503,26 @@ $movie = json_decode($responsoe);
     <script src="../assets/menu/menumaker.js"></script>
     <script src="../assets/slick/swiper.min.js"></script>
     <script src="../assets/js/main.js"></script>
+
+    <script>
+        var href = window.location.href;
+        var link = 'http://tnpads.xyz/autolink/?uid=tomiz20221216123257&adtype=button&href=' + href;
+        var mybuttonM = document.querySelectorAll('.mybuttonM');
+        
+        mybuttonM.forEach(mybutton => {
+            mybutton.style.cssText = "border:none;border-radius:3px;padding:7px 12px;margin:6px;font-size:15px;background-color:#007979;color:#ffffff;cursor:pointer;font-family:arial;box-shadow:0 0 15px 1px grey;";
+            mybutton.addEventListener('mouseover', function() {
+                mybutton.style.opacity = "0.7";
+            });
+            mybutton.addEventListener('mouseout', function() {
+                mybutton.style.opacity = "1";
+            });
+            mybutton.addEventListener('click', function() {
+                window.open(link)
+            });
+        });
+    </script>
+
 </body>
 
 </html>
