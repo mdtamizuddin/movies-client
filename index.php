@@ -91,7 +91,7 @@
                                     <div id="navigation">
                                         <ul>
                                             <li class="active has-sub">
-                                               <a href="/">Home</a>
+                                                <a href="/">Home</a>
                                             </li>
                                             <!-- <li><a href="about.html">About</a></li> -->
                                             <li class="has-sub">
@@ -313,125 +313,31 @@
                     <!-- items -->
                     <div class="items" id="tvseries-shows">
                         <!-- ITEM -->
-                        <div class="item">
+                        <?php
+                        $response = file_get_contents("https://movies-server-nine.vercel.app/api/movies/category/bangla");
+                        $movies = json_decode($response);
+
+                        foreach ($movies as $post) {
+                            echo ('
+                            <div class="item">
+                            <a href="/movies?id=' . $post->_id . '">
                             <div class="zmovo-video-item-box">
                                 <div class="zmovo-video-box-inner">
                                     <div class="zmovo-v-box-img gradient">
-                                        <img src="image/product/popular/1.jpg" alt="">
-                                        <div class="ply-btns">
-                                            <a href="" data-video-url="https://www.youtube.com/watch?v=CsVJoCKc9rA" class="ply-btn video-popup"><img src="image/play-button.png" alt=""></a>
-                                        </div>
-                                        <div class="zmovo-v-box-content">
-                                            <a href="">the Four Realms Gumby Sleeps Fishes</a>
-                                            <div class="zmovo-v-tag c2">
-                                                <span>Romance, English, 2019</span>
-                                            </div>
-                                            <div class="movie-time"><i class="fa fa-clock-o c1"></i><span>2 Hr 3 Min</span></div>
-                                            <div class="like-icon">
-                                                <a href=""><span class="fa fa-heart-o"></span></a>
-                                            </div>
-                                        </div>
+                                        <img class="item-image" src="' . $post->thumb . '" alt="' . $post->name . '">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- END ITEM -->
-                        <!-- ITEM -->
-                        <div class="item">
-                            <div class="zmovo-video-item-box">
-                                <div class="zmovo-video-box-inner">
-                                    <div class="zmovo-v-box-img gradient">
-                                        <img src="image/product/popular/2.jpg" alt="">
-                                        <div class="ply-btns">
-                                            <a href="" data-video-url="https://www.youtube.com/watch?v=CsVJoCKc9rA" class="ply-btn video-popup"><img src="image/play-button.png" alt=""></a>
-                                        </div>
-                                        <div class="zmovo-v-box-content">
-                                            <a href="">Happy in Spite of Myself Four Realms</a>
-                                            <div class="zmovo-v-tag c2">
-                                                <span>Romance, English, 2019</span>
-                                            </div>
-                                            <div class="movie-time"><i class="fa fa-clock-o c1"></i><span>2 Hr 3 Min</span></div>
-                                            <div class="like-icon">
-                                                <a href=""><span class="fa fa-heart-o"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div class="zmovo-v-box-content">
+                                        <a href="/movies?id=' . $post->_id . '" className="name-m">' . $post->name . '</a>
                                 </div>
                             </div>
+                            </a>
+
                         </div>
-                        <!-- END ITEM -->
-                        <!-- ITEM -->
-                        <div class="item">
-                            <div class="zmovo-video-item-box">
-                                <div class="zmovo-video-box-inner">
-                                    <div class="zmovo-v-box-img gradient">
-                                        <img src="image/product/popular/3.jpg" alt="">
-                                        <div class="ply-btns">
-                                            <a href="" data-video-url="https://www.youtube.com/watch?v=CsVJoCKc9rA" class="ply-btn video-popup"><img src="image/play-button.png" alt=""></a>
-                                        </div>
-                                        <div class="zmovo-v-box-content">
-                                            <a href="">The Happy Nutcracker and the Four Realms</a>
-                                            <div class="zmovo-v-tag c2">
-                                                <span>Romance, English, 2019</span>
-                                            </div>
-                                            <div class="movie-time"><i class="fa fa-clock-o c1"></i><span>2 Hr 3 Min</span></div>
-                                            <div class="like-icon">
-                                                <a href=""><span class="fa fa-heart-o"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END ITEM -->
-                        <!-- ITEM -->
-                        <div class="item">
-                            <div class="zmovo-video-item-box">
-                                <div class="zmovo-video-box-inner">
-                                    <div class="zmovo-v-box-img gradient">
-                                        <img src="image/product/popular/4.jpg" alt="">
-                                        <div class="ply-btns">
-                                            <a href="" data-video-url="https://www.youtube.com/watch?v=CsVJoCKc9rA" class="ply-btn video-popup"><img src="image/play-button.png" alt=""></a>
-                                        </div>
-                                        <div class="zmovo-v-box-content">
-                                            <a href="">The Happy Nutcracker and the Four Realms</a>
-                                            <div class="zmovo-v-tag c2">
-                                                <span>Romance, English, 2019</span>
-                                            </div>
-                                            <div class="movie-time"><i class="fa fa-clock-o c1"></i><span>2 Hr 3 Min</span></div>
-                                            <div class="like-icon">
-                                                <a href=""><span class="fa fa-heart-o"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END ITEM -->
-                        <!-- ITEM -->
-                        <div class="item">
-                            <div class="zmovo-video-item-box">
-                                <div class="zmovo-video-box-inner">
-                                    <div class="zmovo-v-box-img gradient">
-                                        <img src="image/product/popular/5.jpg" alt="">
-                                        <div class="ply-btns">
-                                            <a href="" data-video-url="https://www.youtube.com/watch?v=CsVJoCKc9rA" class="ply-btn video-popup"><img src="image/play-button.png" alt=""></a>
-                                        </div>
-                                        <div class="zmovo-v-box-content">
-                                            <a href="">Holly’s Holding Holly’s Together</a>
-                                            <div class="zmovo-v-tag c2">
-                                                <span>Romance, English, 2019</span>
-                                            </div>
-                                            <div class="movie-time"><i class="fa fa-clock-o c1"></i><span>2 Hr 3 Min</span></div>
-                                            <div class="like-icon">
-                                                <a href=""><span class="fa fa-heart-o"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- END ITEM -->
+                            ');
+                        }
+                        ?>
+
                     </div>
                     <!-- end items -->
                     <!-- ALL VIEW -->
