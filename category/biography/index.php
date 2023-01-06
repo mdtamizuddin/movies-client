@@ -9,29 +9,28 @@
     <meta name="keywords" content="Zmovo - Online Movie Video And TV Show HTML Bootstrap 4 Template">
     <meta name="author" content="Themepul">
     <title>Zmovo - Online Movie Video And TV Show HTML Bootstrap 4 Template</title>
-    <link href="../image/favicon.png" rel="icon" />
+    <link href="image/favicon.png" rel="icon" />
     <!-- BOOTSTRAP CSS -->
-    <link rel="stylesheet" type="text/css" href="../assets/bootstrap-4.2.1/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/bootstrap-4.2.1/bootstrap.min.css">
     <!-- END BOOTSTRAP CSS -->
 
     <!-- OWL CAROUSEL -->
-    <link rel="stylesheet" type="text/css" href="../assets/owlcarousel/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/owlcarousel/owl.carousel.css">
     <!-- END OWL CAROUSEL -->
 
     <!-- FONT CSS -->
-    <link rel="stylesheet" type="text/css" href="../assets/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="../assets/css/icofont.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/icofont.min.css">
 
-    <link rel="stylesheet" type="text/css" href="../assets/owlcarousel/animated.css">
-    <link rel="stylesheet" type="text/css" href="../assets/video/video.popup.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/owlcarousel/animated.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/video/video.popup.css">
 
     <!-- STYLE CSS -->
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/style.css">
     <!-- END STYLE CSS -->
 
     <!-- RESPONSIVE CSS -->
-    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/responsive.css">
     <!-- END RESPONSIVE CSS -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CPoppins:200,300,400,500,600,700,800,900" rel="stylesheet">
     <!--[if lt IE 9]>
@@ -224,7 +223,7 @@
                                                             <div class="row">
 
                                                                 <?php
-                                                                $response = file_get_contents("http://localhost:5000/api/movies/genres/biography");
+                                                                $response = file_get_contents("https://movies-server-nine.vercel.app/api/movies/genres/biography");
                                                                 $movies = json_decode($response);
                                                                 if (count($movies) > 0) {
                                                                     foreach ($movies as $post) {
