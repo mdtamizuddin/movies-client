@@ -217,104 +217,66 @@
                                             <!-- Left -->
                                             <div class="col-lg-9">
                                                 <!-- Product Filter -->
-                                                <!-- end Product Filter -->
+
                                                 <div class="zmoto-products">
                                                     <div class="zmovo-product-list">
-                                                        <div class="tab-pane fade active in show" id="grid" role="tabpanel">
-                                                            <div class="row">
-
-                                                                <?php
-                                                                $response = file_get_contents("http://localhost:5000/api/movies/genres/anime");
-                                                                $movies = json_decode($response);
-                                                                if (count($movies) > 0) {
-                                                                    foreach ($movies as $post) {
-                                                                        echo ('
-                                                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                                                                        <div class="item">
-                                                                            
-                                                                            <div class="zmovo-video-item-box">
-                                                                                <div class="zmovo-video-box-inner">
-                                                                                    <div class="zmovo-v-box-img gradient">
-                                                                                   
-                                                                                    <img class="item-image" src="' . $post->thumb . '" alt="' . $post->name . '">
-                                                                                   
-                                                                                        <div class="zmovo-v-box-content">
-                                                                                        <a class="link" href="/movies?id=' . $post->_id . '">
-                                                                                            <a href="/movies?id=' . $post->_id . '">' . $post->name . '</a>
-                                                                                            <div class="zmovo-v-tag c2">
-                                                                                                <span>' . $post->language . '</span>
-                                                                                            </div>
-                                                                                            <div class="movie-time"><i class="fa fa-clock-o c1"></i><span>' . $post->duration . '</span></div>
-                                                                                            </a>
-                                                                                        </div>
-                                                                                       
+                                                        <div class="tab-pane fade in active in show" id="list" role="tabpanel">
+                                                            <div class="zmovo-product-list mb-30">
+                                                                <div class="row">
+                                                                    <div class="col-lg-4 col-md-5">
+                                                                        <div class="zmovo-product-list-item zmovo-v-box-img gradient">
+                                                                            <img src="../image/product/270/1.jpg" alt="">
+                                                                            <div class="ply-btns">
+                                                                                <a href="" data-video-url="https://www.youtube.com/watch?v=CsVJoCKc9rA" class="ply-btn video-popup"><img src="../image/play-button.png" alt=""></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-lg-8 col-md-7">
+                                                                        <div class="zmovo-product-list-dec">
+                                                                            <div class="zmovo-trailor-meta-info">
+                                                                                <div class="dec-review-dec">
+                                                                                    <div class="details-title">
+                                                                                        <a href="">Hurry Animate Blue Strack New Movie (2018)</a>
+                                                                                    </div>
+                                                                                    <div class="ratting">
+                                                                                        <span class="fa fa-star"></span>
+                                                                                        <span class="fa fa-star"></span>
+                                                                                        <span class="fa fa-star"></span>
+                                                                                        <span class="fa fa-star"></span>
+                                                                                        <span class="fa fa-star"></span>
+                                                                                        <a href="">6/5 ratitng</a>
+                                                                                    </div>
+                                                                                    <div class="dec-review-meta">
+                                                                                        <ul>
+                                                                                            <li><span>Category <label>:</label></span><a href="">English Animation Movies</a></li>
+                                                                                            <li><span>Actor <label>:</label></span><a href="">Priti kapel, Justin orjun</a></li>
+                                                                                            <li><span>Genre <label>:</label></span><a href="">Drama, Action Releas</a></li>
+                                                                                            <li><span>release <label>:</label></span><a href="">15,10,17</a></li>
+                                                                                            <li><span>languase <label>:</label></span><a href="">english</a></li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                    <div class="social-links">
+                                                                                        <strong>Share :</strong>
+                                                                                        <a href="" class="socila-fb"><span class="fa fa-facebook"></span></a>
+                                                                                        <a href="" class="socila-tw"><span class="fa fa-twitter"></span></a>
+                                                                                        <a href="" class="socila-sk"><span class="fa fa-skype"></span></a>
+                                                                                        <a href="" class="socila-pin"><span class="fa fa-pinterest"></span></a>
+                                                                                        <a href="" class="socila-ins"><span class="fa fa-instagram"></span></a>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
-                                                                            
                                                                         </div>
                                                                     </div>
-                                                                            ');
-                                                                    };
-                                                                } else {
-                                                                    echo "<h1 class=' not-found'>No Movie Found </h1>";
-                                                                }
-
-
-                                                                ?>
-
-
+                                                                </div>
                                                             </div>
+
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <!-- Product Filter -->
-                                                <div class="product-filter">
-                                                    <div class="product-filter-inner">
-                                                        <div class="row">
-                                                            <!-- LIST VIEW OR GRID VIEW -->
-                                                            <div class="col-12 col-md-2 col-lg-2 col-xl-3 sm-width">
-                                                                <div class="product-filter-list">
-                                                                    <ul class="nav" role="tablist">
-                                                                        <li class="active"> <a href="#grid" class="active show" role="tab" data-toggle="tab"><i class="fa fa-th"></i></a></li>
-                                                                        <li> <a href="#list" data-toggle="tab" role="tab"><i class="fa fa-th-list"></i></a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END LIST VIEW OR GRID VIEW -->
-                                                            <!-- SHORT BY -->
-                                                            <div class="col-12 col-md-6 col-lg-6 col-xl-5 sm-width">
-                                                                <div class="product-filter-list">
-                                                                    <div class="short-by-show form-inline2">
 
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END SHORT BY -->
-                                                            <!-- PAGINATION -->
-                                                            <div class="ccol-12 col-md-4 col-lg-4 col-xl-4 pro-pagination sm-width">
-                                                                <div class="product-filter-list">
-                                                                    <div class="pagination-wrapper">
-                                                                        <nav aria-label="navigations">
-                                                                            <ul class="pagination">
-                                                                                <li class="page-item"><a class="page-link pagefirst" href="#"><i class="fa fa-angle-left"></i></a></li>
-                                                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                                                <li class="page-item active"><a class="page-link" href="#">2</a></li>
-                                                                                <li class="page-item active"><a class="page-link" href="#">3</a></li>
-                                                                                <li class="page-item"><a class="page-link lastpage" href="#"><i class="fa fa-angle-right"></i></a></li>
-                                                                            </ul>
-                                                                        </nav>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <!-- END PAGINATION -->
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- end Product Filter -->
                                             </div>
                                             <!-- End Left -->
-                                            <!-- Right -->
                                             <div class="col-lg-3">
                                                 <div class="zmovo-widget">
                                                     <h2 id="hidden-cat" class="widget-title mb-30 hidden-cat"><span>Latest Updates</span></h2>
@@ -367,7 +329,7 @@
         <footer class="zmovo-footer-area pt-50">
             <div class="zmovo-footer">
                 <div class="container">
-
+                    
                     <div class="zmovo-footer-center pt-50">
                         <div class="zmovo-ft-widgets">
                             <div class="row">

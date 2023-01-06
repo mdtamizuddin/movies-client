@@ -8,7 +8,7 @@
     <meta name="description" content="Zmovo - Online Movie Video And TV Show HTML Bootstrap 4 Template">
     <meta name="keywords" content="Zmovo - Online Movie Video And TV Show HTML Bootstrap 4 Template">
     <meta name="author" content="Themepul">
-    <title><?php echo "Hello" ?> Zmovo - Online Movie Video And TV Show </title>
+    <title>Zmovo - Online Movie Video And TV Show </title>
     <link href="image/favicon.png" rel="icon" />
     <!-- BOOTSTRAP CSS -->
     <link rel="stylesheet" type="text/css" href="assets/bootstrap-4.2.1/bootstrap.min.css">
@@ -91,7 +91,7 @@
                                     <div id="navigation">
                                         <ul>
                                             <li class="active has-sub">
-                                                <a href="index.php">Home</a>
+                                               <a href="/">Home</a>
                                             </li>
                                             <!-- <li><a href="about.html">About</a></li> -->
                                             <li class="has-sub">
@@ -185,7 +185,7 @@
                     <input class="d-md-none search-feild" type="search" placeholder="Enter the movie Name">
                     <div class="col-lg-2 zmovo-t-right">
                         <div class="zmovo-header-right">
-                        
+
                             <div class="zmovo-top-search">
                                 <div class="zmovo-ser-icon" id="clickserch"><span class="fa fa-search"></span></div>
                                 <div class="zmovo-hidden-search" id="opensearch">
@@ -202,7 +202,7 @@
         </header>
         <!-- SLIDER SECTION --->
 
-        
+
         <!-- END SLIDER SECTION --->
         <!-- VIDEO PLYLIST SECTION -->
 
@@ -223,7 +223,7 @@
                         foreach ($movies as $post) {
                             echo ('
                             <div class="item">
-                            <a href="/movies?id='.$post->_id.'">
+                            <a href="/movies?id=' . $post->_id . '">
                             <div class="zmovo-video-item-box">
                                 <div class="zmovo-video-box-inner">
                                     <div class="zmovo-v-box-img gradient">
@@ -231,7 +231,7 @@
                                     </div>
                                 </div>
                                 <div class="zmovo-v-box-content">
-                                        <a href="" className="name-m">' . $post->name . '</a>
+                                        <a href="/movies?id=' . $post->_id . '" className="name-m">' . $post->name . '</a>
                                 </div>
                             </div>
                             </a>
@@ -266,7 +266,7 @@
                     <!-- items -->
                     <div class="items" id="popular-shows">
                         <!-- ITEM -->
-                        
+
                         <!-- END ITEM -->
                         <!-- ITEM -->
                         <?php
@@ -276,7 +276,7 @@
                         foreach ($movies as $post) {
                             echo ('
                         <div class="item">
-                        <a href="/movies?id='.$post->_id.'">
+                        <a href="/movies?id=' . $post->_id . '">
                             <div class="zmovo-video-item-box">
                                 <div class="zmovo-video-box-inner">
                                     <div class="zmovo-v-box-img gradient">
@@ -284,7 +284,7 @@
                                     </div>
                                 </div>
                                 <div class="zmovo-v-box-content">
-                                        <a href="" className="name-m">' . $post->name . '</a>
+                                        <a href="/movies?id=' . $post->_id . '" className="name-m">' . $post->name . '</a>
                                 </div>
                             </div>
                             </a>

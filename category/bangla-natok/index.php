@@ -224,7 +224,7 @@
                                                             <div class="row">
 
                                                                 <?php
-                                                                $response = file_get_contents("http://localhost:5000/api/movies/genres/anime");
+                                                                $response = file_get_contents("http://localhost:5000/api/movies/category/bangla-natok");
                                                                 $movies = json_decode($response);
                                                                 if (count($movies) > 0) {
                                                                     foreach ($movies as $post) {

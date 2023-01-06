@@ -443,6 +443,10 @@
 }
 
 @media (min-width:320px) and (max-width:575px) {
+    .zmovo-v-box-img img{
+        width: auto !important;
+        height: auto;
+    }
     .zmovo-slider-contents {
         padding: 0;
         height: 300px;
