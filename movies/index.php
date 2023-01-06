@@ -283,7 +283,17 @@ $movie = json_decode($responsoe);
                                                                                     </div>
                                                                                     <button class="mybuttonM">Download</button>
                                                                                     <div class="mt-2">
-                                                                                        <h4>Download</h4>
+                                                                                        <h4>ScreenShoots</h4>
+                                                                                        <?php
+                                                                                        foreach ($movie->screenShoot as $sLink) {
+                                                                                            echo ('
+                                                                                        <div class="download-section mt-5">
+                                                                                           <img class="seen" src="' . $sLink . '" alt=""/>
+                                                                                        </div>
+                                                                                        ');
+                                                                                        }
+                                                                                        ?>
+                                                                                        <h4 class="mt-2">Download</h4>
                                                                                         <?php
                                                                                         foreach ($movie->downloadLinks as $link) {
                                                                                             echo ('
@@ -508,7 +518,7 @@ $movie = json_decode($responsoe);
         var href = window.location.href;
         var link = 'http://tnpads.xyz/autolink/?uid=tomiz20221216123257&adtype=button&href=' + href;
         var mybuttonM = document.querySelectorAll('.mybuttonM');
-        
+
         mybuttonM.forEach(mybutton => {
             mybutton.style.cssText = "border:none;border-radius:3px;padding:7px 12px;margin:6px;font-size:15px;background-color:#007979;color:#ffffff;cursor:pointer;font-family:arial;box-shadow:0 0 15px 1px grey;";
             mybutton.addEventListener('mouseover', function() {

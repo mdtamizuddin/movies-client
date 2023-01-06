@@ -1464,6 +1464,10 @@ header.zmovo-header {
     z-index: 99;
     background: #000;
 }
+.seen{
+    max-height: 250px !important;
+    height: auto;
+}
 
 .zmovo-v-box-content>a {
     color: #fff;
