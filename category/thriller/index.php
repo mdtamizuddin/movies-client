@@ -223,7 +223,7 @@
                                                             <div class="row">
 
                                                                 <?php
-                                                                $response = file_get_contents("https://movies-server-nine.vercel.app/api/movies/genres/thriller");
+                                                                $response = file_get_contents("https://e45a-40-77-45-128.ngrok.io/api/movies/genres/thriller");
                                                                 $movies = json_decode($response);
                                                                 if (count($movies) > 0) {
                                                                     foreach ($movies as $post) {
@@ -327,7 +327,7 @@
                                                         <div class="zmovo-video-list-items">
                                                             <div class="zmovo-v-list-items mt-30">
                                                                 <?php
-                                                                $response = file_get_contents("https://movies-server-nine.vercel.app/api/movies/popular/2023/now");
+                                                                $response = file_get_contents("https://e45a-40-77-45-128.ngrok.io/api/movies/popular/2023/now");
                                                                 $movies = json_decode($response);
 
                                                                 foreach ($movies as $post) {
