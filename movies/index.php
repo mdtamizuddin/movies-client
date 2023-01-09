@@ -1,6 +1,6 @@
 <?php
 $id = $_GET["id"];
-$url = "https://e45a-40-77-45-128.ngrok.io/api/movies/" . $id . "";
+$url = "https://movie-server.cyclic.app/api/movies/" . $id . "";
 $responsoe = file_get_contents($url);
 $movie = json_decode($responsoe);
 
@@ -344,7 +344,7 @@ $movie = json_decode($responsoe);
                                                     <div class="zmovo-video-list-items">
                                                         <div class="zmovo-v-list-items mt-30">
                                                             <?php
-                                                            $response = file_get_contents("https://e45a-40-77-45-128.ngrok.io/api/movies/popular/2023/now");
+                                                            $response = file_get_contents("https://movie-server.cyclic.app/api/movies/popular/2023/now");
                                                             $movies = json_decode($response);
 
                                                             foreach ($movies as $post) {

@@ -217,7 +217,7 @@
                     <div class="items" id="new-arrivle">
                         <!-- ITEM -->
                         <?php
-                        $response = file_get_contents("https://e45a-40-77-45-128.ngrok.io/api/movies");
+                        $response = file_get_contents("https://movie-server.cyclic.app/api/movies");
                         $movies = json_decode($response);
 
                         foreach ($movies as $post) {
@@ -270,7 +270,7 @@
                         <!-- END ITEM -->
                         <!-- ITEM -->
                         <?php
-                        $response = file_get_contents("https://e45a-40-77-45-128.ngrok.io/api/movies/popular/2023/now");
+                        $response = file_get_contents("https://movie-server.cyclic.app/api/movies/popular/2023/now");
                         $movies = json_decode($response);
 
                         foreach ($movies as $post) {
@@ -314,7 +314,7 @@
                     <div class="items" id="tvseries-shows">
                         <!-- ITEM -->
                         <?php
-                        $response = file_get_contents("https://e45a-40-77-45-128.ngrok.io/api/movies/category/bangla");
+                        $response = file_get_contents("https://movie-server.cyclic.app/api/movies/category/bangla");
                         $movies = json_decode($response);
 
                         foreach ($movies as $post) {
